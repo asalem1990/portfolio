@@ -1,0 +1,21 @@
+.welcome {
+  img {
+    max-width : 160px;
+    margin    : auto;
+
+    @media (max-width: 768px) {
+      width : 120px;
+    }
+  }
+
+  .headline {
+    font-size: 4.5em;
+    @media (max-width: 768px) {
+      font-size: 2.5em;
+    }
+  }
+
+  .text {
+    font-size: 1.5em;
+  }
+}

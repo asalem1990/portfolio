@@ -1,0 +1,167 @@
+<div class="container" id="experience">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h1>Experience</h1>
+      <span class="section-actions">
+        <a href="#" *ngIf="sortEnabled" (click)="publishSort(); $event.preventDefault();">Save Sort | </a>
+        <a href="#" (click)="newExperienceForm=!newExperienceForm;$event.preventDefault()">
+          New +
+        </a>
+      </span>
+    </div>
+
+    <div class="col-xs-12">
+      <div class="timeline" [sortablejs]="experienceList" [sortablejsOptions]="experienceListOptions">
+        <div class="work_item row-fluid" *ngIf="newExperienceForm" style="padding:0;">
+          <div class="col-xs-12">
+            <form class="form-horizontal" (ngSubmit)="publishNewExperience()" #newExperienceFormElement>
+              <h3>Add Experience:</h3>
+              <hr/>
+              <p>
+                <img *ngIf="newExperience && newExperience.company_logo" alt="" [src]="newExperience.company_logo | async" height="32px">
+                <input style="display: none" type="file" (change)="onCompanyLogoChanged($event)" #fileInput>
+              </p>
+              <p><a href="#" (click)="fileInput.click();$event.preventDefault()">Upload Company Logo</a></p>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" placeholder="Position Title" (input)="newExperience.position = $event.target.value">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" placeholder="Company Name" (input)="newExperience.company = $event.target.value">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" placeholder="Company Location" (input)="newExperience.company_location = $event.target.value">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" placeholder="Company Website" (input)="newExperience.company_website = $event.target.value">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-6">
+                  <input type="date" class="form-control" placeholder="Start Date" (input)="newExperience.start_date = $event.target.value">
+                </div>
+                <div class="col-sm-6">
+                  <input type="date" class="form-control" placeholder="End Date" (input)="newExperience.end_date = $event.target.value">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <ckeditor [editor]="Editor" [config]="{ toolbar: [] }" data="Position Description" (change)="newExperience.description = onChangeDescriptionEditor($event)"></ckeditor>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-default" [disabled]="!validateNewExperienceForm()">Publish</button> |
+                  <a href="#" (click)="newExperienceFormElement.reset();newExperience={};newExperienceForm=!newExperienceForm; $event.preventDefault()">Cancel</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div *ngFor="let item of experienceList"  class="work_item row-fluid">
+          <div class="col-xs-12 content">
+            <p>
+              <img alt="" src="{{item.company_logo}}" height="32px">
+            </p>
+            <p class="employment_title">
+              {{item.position}} | <a href="{{item.company_website}}" target="_blank" *ngIf="item.company_website && item.company_website !== 'undefined'">{{item.company}}</a> <span *ngIf="!item.company_website || item.company_website === 'undefined'">{{item.company}}</span>, {{item.company_location}}
+            </p>
+            <div class="employment_description" [innerHTML]="item.description"></div>
+            <p class="employment_projects" *ngIf="item.projects.length">
+              Related Perojects:
+              <a href="#project_{{project.id}}" *ngFor="let project of item.projects">
+                {{project.title}}
+              </a>
+            </p>
+            <p>
+              <a href="#" (click)="editExperience=item;$event.preventDefault()">
+                <i class="glyphicon glyphicon-edit"></i> Edit
+              </a>
+            </p>
+          </div>
+          <span class="breakdown_date">
+            {{item.start_date | date:'MMM, y' }} - {{(item.end_date != '0000-00-00') ? (item.end_date | date:'MMM, y') : 'Current'}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade show in" *ngIf="editExperience.id" id="edit_position_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="editExperience={}">
+        <svg height="64" version="1.1" width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <desc>Created with Snap</desc>
+          <defs></defs>
+          <g>
+        		<path fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="bevel" d="M12.972944,50.936147C12.972944,50.936147,51.027056,12.882035,51.027056,12.882035"></path>
+        		<path fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0" style="opacity: 0;"></path>
+        		<path fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="bevel" d="M12.972944,12.882035000000002C12.972944,12.882035000000002,51.027056,50.936147,51.027056,50.936147"></path>
+        	</g>
+        </svg>
+      </button>
+      <div class="modal-body">
+        <div class="modal-header">
+          Edit Position
+        </div>
+        <form class="form-horizontal" (ngSubmit)="publishNewExperience()" #editExperienceForm>
+          <input type="hidden" name="id" value="{{editExperience.id}}">
+          <p>
+            <img *ngIf="editExperience.company_logo" alt="" src="{{editExperience.company_logo}}" height="32px" style="width: auto;">
+            <input style="display: none" type="file" (change)="onCompanyLogoChanged($event)" #fileInput>
+          </p>
+          <p><a href="#" (click)="fileInput.click();$event.preventDefault()">Update Company Logo</a></p>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" placeholder="Position Title" (input)="editExperience.position = $event.target.value" value="{{editExperience.position}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" placeholder="Company Name" (input)="editExperience.company = $event.target.value" value="{{editExperience.company}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" placeholder="Company Location" (input)="editExperience.company_location = $event.target.value" value="{{editExperience.company_location}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" placeholder="Company Website" (input)="editExperience.company_website = $event.target.value" value="{{editExperience.company_website}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-6">
+              <input type="date" class="form-control" placeholder="Start Date" (input)="editExperience.start_date = $event.target.value"  value="{{(editExperience.start_date != '0000-00-00') ? (editExperience.start_date | date:'yyyy-MM-dd') : ''}}">
+            </div>
+            <div class="col-sm-6">
+              <input type="date" class="form-control" placeholder="End Date" (input)="editExperience.end_date = $event.target.value" value="{{(editExperience.end_date != '0000-00-00') ? (editExperience.end_date | date:'yyyy-MM-dd') : ''}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <ckeditor [editor]="Editor" [config]="{ toolbar: [] }" data="{{editExperience.description}}" (change)="editExperience.description = onChangeDescriptionEditor($event)"></ckeditor>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-default" [disabled]="!validateEditExperienceForm()">Publish</button>
+              <a href="#" (click)="removeExperienceItem(editExperience.id);experienceFormElement.reset();$event.preventDefault()"> | Remove Experience</a>
+              <a href="#" (click)="editExperience={}; $event.preventDefault()"> | Cancel</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

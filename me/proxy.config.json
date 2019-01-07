@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://ninjitsu.co/",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

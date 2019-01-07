@@ -1,0 +1,94 @@
+@import "../vars.scss";
+
+.btn-default {
+	background-color: $DARK_THEME_LIGHT_BG;
+  border-color: $DARK_THEME_LIGHT_BG;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+	&:hover {
+		&:not([disabled]) {
+			background-color: $LIGHT_THEME_LIGHT_BG;
+		  border-color: $LIGHT_THEME_LIGHT_BG;
+			color: $DARK_THEME_LIGHT_BG;
+		}
+	}
+}
+
+.form-control:focus {
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+	border-color: $DARK_THEME_LIGHT_BG;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.modal {
+	background: $black_80;
+	z-index: 9999;
+	&.in .modal-dialog {
+		width: 90vw;
+		height: 90vh;
+		overflow: visible;
+	}
+
+	&-content {
+		border-radius: 0;
+		height: 100%;
+		.modal-body {
+			overflow: auto;
+			height: 100%;
+			padding: 0;
+		}
+		.close {
+			position: absolute;
+			z-index: 99;
+			width: 26px;
+			height: 26px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			bottom: initial;
+			right: 0;
+			left: initial;
+			top: -36px;
+			background: transparent;
+			opacity: 1;
+			svg {
+				height: 100%;
+			}
+		}
+		form {
+	    padding: 16px;
+		}
+		.carousel {
+			img {
+				width: 100%;
+			}
+			&-control {
+				position: absolute;
+				z-index: 99;
+				width: 26px;
+		    height: 26px;
+		    text-align: center;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    top: -36px;
+		    right: -26px;
+		    left: 0;
+		    background: transparent;
+		    opacity: 1;
+				svg {
+					height: 100%;
+				}
+				&.right {
+					left: 32px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row"  id="about_me" *ngIf="data">
+        <div class="col-xs-12 col-sm-4 col-md-3 text-center">
+          <p class="profile-image"><img src="assets/profile_image.jpg" alt="Profile Image" class="img-responsive"></p>
+          <p class="full-name">{{data.full_name}}</p>
+          <small>{{data.position_title}}</small>
+          <ul class="contact-links">
+              <li *ngFor="let channel of data.social_channels">
+                  <a [href]="sanitize(channel.URL)" target="_blank" title="{{channel.title}}">
+                      <img src="{{channel.icon}}" alt="{{channel.title}}">
+                  </a>
+              </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div [innerHTML]="data.about_me"></div>
+          <app-contact></app-contact>
+        </div>
+    </div>
+</div>

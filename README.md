@@ -1,2 +1,2 @@
-# portfolio
-Portfolio project
+# personal
+THIS BRANCH IS ONLY FOR THE PORTFOLIO PROJECT

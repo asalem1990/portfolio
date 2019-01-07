@@ -1,0 +1,140 @@
+[
+  {
+    "title"     : "HTML",
+    "class"     : "col-md-offset-1 col-sm-offset-2",
+    "img"       : "assets/skills/html5.png",
+    "imgStyle"  : ""
+  },
+  {
+    "title"     : "CSS",
+    "class"     : "",
+    "img"       : "assets/skills/css.png",
+    "imgStyle"  : ""
+  },
+  {
+    "title"     : "javascript",
+    "class"     : "",
+    "img"       : "assets/skills/javascript.png",
+    "imgStyle"  : ""
+  },
+  {
+    "title"     : "JQuery",
+    "class"     : "",
+    "img"       : "assets/skills/jquery.png",
+    "imgStyle"  : {"background-color": "#32d1f5"}
+  },
+  {
+    "title"     : "AngularJS",
+    "class"     : "",
+    "img"       : "assets/skills/angularjs.png",
+    "imgStyle"  : {"padding": "50px"}
+  },
+  {
+    "title"     : "AJAX",
+    "class"     : "col-md-offset-0 col-sm-offset-2",
+    "img"       : "assets/skills/ajax.jpg",
+    "imgStyle"  : {"background" : "#ffffff"}
+  },
+  {
+    "title"     : "JSON",
+    "class"     : "",
+    "img"       : "assets/skills/json.png",
+    "imgStyle"  : {"background" : "#ffffff"}
+  },
+  {
+    "title"     : "Bootstrap",
+    "class"     : "col-md-offset-1",
+    "img"       : "assets/skills/bootstrap.png",
+    "imgStyle"  : {"padding": "40px"}
+  },
+  {
+    "title"     : "LESS",
+    "class"     : "",
+    "img"       : "assets/skills/less.png",
+    "imgStyle"  : {"background" : "#182f4e"}
+  },
+  {
+    "title"     : "SASS",
+    "class"     : "",
+    "img"       : "assets/skills/sass.png",
+    "imgStyle"  : {"background" : "#ffffff"}
+  },
+  {
+    "title"     : "UX",
+    "class"     : "col-md-offset-0 col-sm-offset-2",
+    "img"       : "assets/skills/ux.png",
+    "imgStyle"  : {"background" : "#cc0000"}
+  },
+  {
+    "title"     : "XML",
+    "class"     : "",
+    "img"       : "assets/skills/xml.png",
+    "imgStyle"  : ""
+  },
+  {
+    "title"     : "PHP",
+    "class"     : "",
+    "img"       : "assets/skills/php.svg",
+    "imgStyle"  : ""
+  },
+  {
+    "title"     : "JAVA",
+    "class"     : "",
+    "img"       : "assets/skills/java.png",
+    "imgStyle"  : ""
+  },
+  {
+    "title"     : "JSP",
+    "class"     : "col-md-offset-1",
+    "img"       : "assets/skills/jsp.jpg",
+    "imgStyle"  : {"background" : "#f37022", "padding": "40px"}
+  },
+  {
+    "title"     : "LAMP",
+    "class"     : "col-md-offset-0 col-sm-offset-2 ",
+    "img"       : "assets/skills/lamp.png",
+    "imgStyle"  : ""
+  },
+  {
+    "title"     : "MySQL",
+    "class"     : "",
+    "img"       : "assets/skills/mysql.png",
+    "imgStyle"  : {"background" : "#ffffff"}
+  },
+  {
+    "title"     : "NodeJS",
+    "class"     : "",
+    "img"       : "assets/skills/nodejs.png",
+    "imgStyle"  : {"background" : "#313131"}
+  },
+  {
+    "title"     : "CodeIgniter",
+    "class"     : "",
+    "img"       : "assets/skills/codeigniter.png",
+    "imgStyle"  : {"background" : "#ffffff"}
+  },
+  {
+    "title"     : "RESTApi",
+    "class"     : "",
+    "img"       : "assets/skills/rest.png",
+    "imgStyle"  : {"background" : "#ffffff"}
+  },
+  {
+    "title"     : "ReactJS",
+    "class"     : "col-md-offset-0 col-sm-offset-2",
+    "img"       : "assets/skills/reactjs.png",
+    "imgStyle"  : {"background" : "#ffffff", "padding" : "40px"}
+  },
+  {
+    "title"     : "Ionic 2 Framework",
+    "class"     : "col-md-offset-1",
+    "img"       : "assets/skills/ionic_framework.jpg",
+    "imgStyle"  : {"padding" : "40px"}
+  },
+  {
+    "title"     : "TypeScrip",
+    "class"     : "col-md-offset-0 col-sm-offset-4",
+    "img"       : "assets/skills/typescript.png",
+    "imgStyle"  : {"background" : "#127cc9", "padding": "40px"}
+  }
+]

@@ -1,0 +1,53 @@
+<h3>Need help? Contact me then!</h3>
+<form class="form-horizontal" [formGroup]="rForm" (ngSubmit)="email(rForm.value)">
+  <div class="row" *ngIf="isEmailSentMessage || isEmailSentStatus">
+    <p class="col-sm-12">
+      <button type="button" class="close" aria-label="Close" (click)="isEmailSentStatus=''; isEmailSentMessage=''">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <ng-container *ngIf="isEmailSentStatus == 401;  else haveMessage">
+        Oops, something went wrong! please try later or send your message to <a href="mailto:hey@ninjitsu.co">hey@ninjitsu.co</a>
+      </ng-container>
+      <ng-template #haveMessage>
+        {{isEmailSentMessage}}
+      </ng-template>
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <input type="text" class="form-control" id="inputName" placeholder="Your Full Name" formControlName="full_name" >
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <input type="email" class="form-control" id="inputEmail" placeholder="Your Email Address" formControlName="email_address">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <input type="text" class="form-control" id="inputMobile" placeholder="Your Mobile Number" formControlName="mobile_number">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <textarea rows="10" cols="" class="form-control" id="inputMessage" placeholder="Your Request Message" style="resize: none;" formControlName="message"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <button type="submit" class="btn btn-default" [disabled]="!rForm.valid">Send</button>
+      </div>
+    </div>
+  </div>
+</form>

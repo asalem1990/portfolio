@@ -1,0 +1,90 @@
+<div class="container" id="portfolio">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h1>
+        Portfolio
+      </h1>
+    </div>
+    <div class="col-xs-12">
+      <div class="masonry-layout">
+        <div class="masonry-layout-box text-center"  *ngFor="let project of projectsList; let i = index" id="project_{{project.id}}">
+          <div class="cardContainer">
+            <div class="card" (click)="transition(i)">
+              <div class="side front">
+                <img src="{{project.screenshots[0]}}" alt="{{project.title}}">
+                <div class="info">
+                  <h3>{{project.title}}</h3>
+                  <p>{{project.tags}}</p>
+                </div>
+              </div>
+              <div class="side back">
+                <div class="caption">
+                  <div class="content">
+                    <h3>{{project.title}}</h3>
+                    <p>{{project.description}}</p>
+                    <p>{{project.tags}}</p>
+                  </div>
+                  <div class="actions">
+                    <p>
+                      <a *ngIf="project.link && project.link !== 'undefined'" href="{{project.link}}" target="_blank">Go to Website</a>
+                      <a *ngIf="!project.link || project.link === 'undefined'" href="#" (click)="$event.preventDefault()" class="disabled">Internal Product</a>
+                      <a href="#" (click)="projectGalleryInModal=project.screenshots; $event.preventDefault()">View Gallery</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade show in" tabindex="-1" *ngIf="projectGalleryInModal && projectGalleryInModal.length"  role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="projectGalleryInModal=[]">
+        <svg height="64" version="1.1" width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <desc>Created with Snap</desc>
+          <defs></defs>
+          <g>
+        		<path fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="bevel" d="M12.972944,50.936147C12.972944,50.936147,51.027056,12.882035,51.027056,12.882035"></path>
+        		<path fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0" style="opacity: 0;"></path>
+        		<path fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="bevel" d="M12.972944,12.882035000000002C12.972944,12.882035000000002,51.027056,50.936147,51.027056,50.936147"></path>
+        	</g>
+        </svg>
+      </button>
+      <a *ngIf="projectGalleryInModal.length > 1" class="left carousel-control" href="#project_screenshots_carousel" role="button" data-slide="prev">
+        <svg height="64" version="1.1" width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <desc>Created with Snap</desc>
+          <defs></defs>
+          <g>
+        		<path fill="none" stroke-width="5" stroke="#fff" d="M48.592939,9.792208C48.592939,9.792208,15.407061999999996,31.887987,15.407061999999996,31.887987C15.407061999999996,31.887987,48.592939,54.025974,48.592939,54.025974"></path>
+        	</g>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a *ngIf="projectGalleryInModal.length > 1" class="right carousel-control" href="#project_screenshots_carousel" role="button" data-slide="next">
+        <svg height="64" version="1.1" width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <desc>Created with Snap</desc>
+          <defs></defs>
+          <g>
+        		<path fill="none" stroke-width="5" stroke="#fff" d="M15.407061999999996,9.792208C15.407061999999996,9.792208,48.592939,31.887987,48.592939,31.887987C48.592939,31.887987,15.407061999999996,54.025974,15.407061999999996,54.025974"></path>
+          	</g>
+          </svg>
+        <span class="sr-only">Next</span>
+      </a>
+      <div class="modal-body text-center">
+        <div id="project_screenshots_carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner" role="listbox">
+            <div *ngFor="let image of projectGalleryInModal; let i = index" class="item {{i == 0? 'active':''}}">
+              <img src="{{image}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

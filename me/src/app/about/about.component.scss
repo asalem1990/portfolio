@@ -1,0 +1,35 @@
+@import "../../vars.scss";
+#about_me {
+    .profile-image {
+        max-width: 220px;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .full-name {
+        margin: 0;
+    }
+    ul.contact-links {
+        list-style: none;
+        padding: 0px;
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;
+        li {
+            overflow: hidden;
+            a {
+                opacity: 0.7;
+                -webkit-transition: all 0.2s;
+              	-moz-transition: all 0.2s;
+              	transition: all 0.2s;
+                img {
+                  width: 32px;
+                  height: 32px;
+                  margin: 0 0.5rem;
+                }
+                &:hover {
+                  opacity: 1;
+                }
+            }
+        }
+    }
+}

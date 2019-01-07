@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h1>Skills</h1>
+    </div>
+  </div>
+
+  <ng-container *ngIf="skillsListCategoriesed && skillsCategories">
+    <div class="row skills_categories" *ngFor="let cat of skillsCategories">
+      <h3 class="category_title">{{cat}}</h3>
+      <div class="col-xs-12 skills_experience">
+        <div *ngFor="let item of skillsListCategoriesed[cat]" class="skill">
+          <div class="skill_icon">
+            <img alt="{{item.title}}" title="{{item.title}}" src="{{item.icon}}">
+          </div>
+          <div class="skill_info">
+            <h4>{{item.title}}</h4>
+            <p>{{item.description}}</p>
+            <span>Years of Experience: {{item.years_of_experience}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

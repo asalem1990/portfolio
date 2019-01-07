@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row"  id="about_me" *ngIf="data">
+        <div class="col-xs-12 col-sm-4 col-md-3 text-center">
+          <p class="profile-image"><img src="assets/profile_image.jpg" alt="Profile Image" class="img-responsive"></p>
+          <p class="full-name">{{data.full_name}}</p>
+          <small>{{data.position_title}}</small>
+          <ul class="contact-links">
+              <li *ngFor="let channel of data.social_channels">
+                  <a [href]="sanitize(channel.URL)" target="_blank" title="{{channel.title}}">
+                      <img src="{{channel.icon}}" alt="{{channel.title}}">
+                  </a>
+              </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <span class="section-actions">
+            <a href="#" (click)="newAboutMeForm=!newAboutMeForm;$event.preventDefault()">
+              Edit
+            </a>
+          </span>
+          <div [innerHTML]="data.about_me"></div>
+          <app-contact></app-contact>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade show in" *ngIf="newAboutMeForm" id="edit_about_me_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="newAboutMeForm=false">
+        <svg height="64" version="1.1" width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <desc>Created with Snap</desc>
+          <defs></defs>
+          <g>
+        		<path fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="bevel" d="M12.972944,50.936147C12.972944,50.936147,51.027056,12.882035,51.027056,12.882035"></path>
+        		<path fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0" style="opacity: 0;"></path>
+        		<path fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="bevel" d="M12.972944,12.882035000000002C12.972944,12.882035000000002,51.027056,50.936147,51.027056,50.936147"></path>
+        	</g>
+        </svg>
+      </button>
+      <div class="modal-body">
+        <div class="modal-header">
+          Edit About Me
+        </div>
+        <form class="form-horizontal" (ngSubmit)="publishNewAboutMe()" #newAboutMeFormElement>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <ckeditor [editor]="Editor" data="{{data.about_me}}" (change)="data.about_me = onChangeDescriptionEditor($event)"></ckeditor>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-default" [disabled]="!validateNewAboutMeForm()">Publish</button>
+              <a href="#" (click)="newAboutMeForm=false; $event.preventDefault()"> | Cancel</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

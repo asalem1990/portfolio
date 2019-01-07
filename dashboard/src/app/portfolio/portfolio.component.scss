@@ -1,0 +1,203 @@
+@import "../../vars.scss";
+#new_project_carousel {
+	.carousel-inner {
+		min-height: 120px;
+		a.addNewProject {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(16, 8, 8, 0.38);
+			width: 100%;
+			color: white;
+			font-size: 96px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 9;
+
+			&.has_images {
+				color: #fff;
+		    top: initial;
+		    bottom: 40px;
+		    left: 40px;
+		    background: #e74c3c !important;
+		    width: 40px;
+		    height: 40px;
+		    line-height: 40px;
+		    padding: 0 !important;
+		    opacity: 1 !important;
+		    font-size: 34px;
+			}
+			&.removeImage {
+				left: 90px;
+		    font-size: 16px;
+			}
+		}
+	}
+}
+
+.cardContainer {
+  position: relative;
+  width: 100%;
+	-webkit-perspective: 4000px;
+  perspective: 4000px;
+
+	.card {
+		display: inline-block;
+	  width: 100%;
+		box-sizing: content-box;
+	  cursor: pointer;
+	  -moz-backface-visibility: hidden;
+	  -webkit-transform-style: preserve-3d;
+	          transform-style: preserve-3d;
+	  -webkit-transform: translateZ(-100px);
+	          transform: translateZ(-100px);
+	  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		&:after {
+		  content: "";
+		  position: absolute;
+		  z-index: -1;
+		  width: 100%;
+		  height: 100%;
+		  border-radius: 5px;
+		  box-shadow: 0 14px 50px -4px rgba(0, 0, 0, 0.15);
+		  opacity: 0;
+		  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		&:hover {
+		  -webkit-transform: translateZ(0px);
+		          transform: translateZ(0px);
+			&:after {
+			  opacity: 1;
+			}
+		}
+		&.active {
+		  -webkit-transform: translateZ(0px) rotateY(180deg) !important;
+		          transform: translateZ(0px) rotateY(180deg) !important;
+		}
+		&.active:after {
+		  display: none;
+		}
+		.side {
+		  -webkit-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		  position: absolute;
+		  width: 100%;
+		  border-radius: 5px;
+		  background-color: white;
+			h3 {
+				margin: 1rem 0;
+			}
+			&.front {
+			  z-index: 2;
+			}
+			&.back {
+				position: absolute;
+		    bottom: 0;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+				padding: 1rem;
+			  -webkit-transform: rotateY(180deg);
+			          transform: rotateY(180deg);
+				.caption {
+					justify-content: space-between;
+					display: flex;
+					height: 100%;
+					flex-direction: column;
+
+					a {
+						position: relative;
+						color: $DARK_THEME_LIGHT_BG;
+						padding: 0.5rem 1rem;
+						margin: 0 0.5rem;
+						-webkit-transition: color 0.3s;
+						-moz-transition: color 0.3s;
+						transition: color 0.3s;
+						&:before {
+							position: absolute;
+							bottom: -8px;
+							left: 50%;
+							color: transparent;
+							content: '•';
+							text-shadow: 0 0 transparent;
+							-webkit-transition: text-shadow 0.2s, color 0.3s;
+							-moz-transition: text-shadow 0.2s, color 0.3s;
+							transition: text-shadow 0.2s, color 0.3s;
+							-webkit-transform: translateX(-50%);
+							-moz-transform: translateX(-50%);
+							transform: translateX(-50%);
+							pointer-events: none;
+						}
+						&:hover, &:focus {
+							color: $DARK_THEME_DARK_BG;
+							&:before {
+								color: $DARK_THEME_DARK_BG;
+								text-shadow: 8px 0 $DARK_THEME_DARK_BG, -8px 0 $DARK_THEME_DARK_BG;
+							}
+						}
+						@media(max-width : 767px) {
+							padding: 1rem 1rem;
+						}
+					}
+				}
+			}
+		}
+
+		.info {
+		  padding: 16px;
+		}
+		img {
+			display: inline-block;
+		  width: 100%;
+	    height: 284px;
+			object-fit: contain;
+			object-position: center center;
+		}
+	}
+}
+
+.modal {
+	&-dialog {
+		width: auto;
+    height: auto;
+		margin: auto;
+		top: 5vh;
+	}
+	&-content, &-body {
+		height: auto;
+		width: auto;
+    margin: 0;
+		max-height: 90vh;
+		max-width: 90vw;
+		background: none;
+		border: 0;
+		box-shadow: none;
+	}
+
+	.carousel {
+		height: auto;
+		width: auto;
+		max-width: 90vw;
+		max-height: 90vh;
+		overflow: auto;
+		&-inner {
+			height: auto;
+			width: auto;
+			img {
+		    object-fit: contain;
+				max-height: 90vh;
+        max-width: 90vw;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+}

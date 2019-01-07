@@ -1,0 +1,32 @@
+<div class="container" id="experience">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h1>Experience</h1>
+    </div>
+
+    <div class="col-xs-12">
+      <div class="timeline">
+        <div *ngFor="let item of experienceList"  class="work_item row-fluid">
+          <div class="col-xs-12 content">
+            <p>
+              <img alt="" src="{{item.company_logo}}" height="32px">
+            </p>
+            <p class="employment_title">
+              {{item.position}} | <a href="{{item.company_website}}" target="_blank" *ngIf="item.company_website && item.company_website !== 'undefined'">{{item.company}}</a> <span *ngIf="!item.company_website || item.company_website === 'undefined'">{{item.company}}</span>, {{item.company_location}}
+            </p>
+            <div class="employment_description" [innerHTML]="item.description"></div>
+            <p class="employment_projects" *ngIf="item.projects.length">
+              Related Perojects:
+              <a href="#project_{{project.id}}" *ngFor="let project of item.projects">
+                {{project.title}}
+              </a>
+            </p>
+          </div>
+          <span class="breakdown_date">
+            {{item.start_date | date:'MMM, y' }} - {{(item.end_date != '0000-00-00') ? (item.end_date | date:'MMM, y') : 'Current'}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

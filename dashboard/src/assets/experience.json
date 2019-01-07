@@ -1,0 +1,111 @@
+[
+    {
+        "duration": {
+            "start": "Sep, 17",
+            "end": "Present"
+        },
+        "companyName": "Atypon",
+        "companyLogo": "assets/atyponlogo.png",
+        "headline": "Software Engineer",
+        "description": "<p>Working mainly on the UI side implementation, converting the mock-ups into HTML pages, and integrating them with the backend services using multiple technologies.</p>",
+        "projects": []
+    },
+    {
+        "duration": {
+            "start": "Mar, 14",
+            "end": "Aug, 17"
+        },
+        "companyName": "Ooredoo",
+        "companyLogo": "assets/ooredoologo.svg",
+        "headline": "Consultant, Frontend Web Developer (Outsource)",
+        "description": "<p>Taking the responsibility of creating and updating the HTML pages for a various websites and web applications.</p><p>Working mainly on the UI side implementation, converting the mock-ups into HTML pages, and integrating them with the backend services using multiple technologies.</p>",
+        "projects": [
+            {
+              "id"          : "performanceApplication",
+              "title"       : "Ooredoo Performance App"
+            },
+            {
+              "id"          : "ooredooWbsiteUXRevamp",
+              "title"       : "Ooredoo Website UI/UX Revamp"
+            },
+            {
+              "id"          : "gladiatorWebsite",
+              "title"       : "Gladiator website"
+            },
+            {
+              "id"          : "ooredooRDS",
+              "title"       : "Retail Digital Screens"
+            },
+            {
+              "id"          : "ooredooDigitalShahryWebsite",
+              "title"       : "Ooredoo Digital Shahry Website"
+          },
+          {
+            "id"          : "ooredooTVWebsite",
+            "title"       : "Ooredoo TV Website"
+          },
+          {
+            "id"          : "ooredooWebsite",
+            "title"       : "Ooredoo Website"
+          },
+          {
+            "id"          : "preorderWebsites",
+            "title"       : "Ooredoo Pre-Order Website"
+          },
+          {
+            "id"          : "almassaaWebsite",
+            "title"       : "Ooredoo - Al Massaa Website"
+          },
+          {
+            "id"          : "OoredooB2CWebsite",
+            "title"       : "Ooredoo B2C Website"
+          },
+          {
+            "id"          : "OoredooCommunityWebsite",
+            "title"       : "Ooredoo Community Website"
+          }
+        ]
+    },
+    {
+        "duration": {
+            "start": "Mar, 14",
+            "end": "Aug, 17"
+        },
+        "companyName": "iHorizons",
+        "companyLogo": "assets/ihorizonslogo.png",
+        "headline": "Frontend Web Developer",
+        "description": "<p>Taking the responsibility of creating and updating the HTML pages for a various websites and web applications.</p><p>Working mainly on the UI side implementation, converting the mock-ups into HTML pages, and integrating them with the backend services using multiple technologies.</p>"
+    },
+    {
+        "duration": {
+            "start": "Jun, 12",
+            "end": "Jul, 13"
+        },
+        "companyName": "ReserveOut",
+        "companyLogo": "assets/reserveoutlogo.svg",
+        "headline": "Junior Web Developer",
+        "description": "<p>I've started my career path when I worked in a small team for this startup company which based in Amman, while I was still doing my Bachelors.</p><p>I've worked mainly on the UI side implementation, converting the mock-ups into HTML pages, and integrating them with the backend services using JSP technology. <br>I've worked on the backend side as well, created services, and modified some others.</p>",
+        "projects": [
+            {
+              "id"          : "reserveout",
+              "title"       : "ReserveOut Website"
+            }
+        ]
+    },
+    {
+        "duration": {
+            "start": "Sep, 09",
+            "end": "Feb, 14"
+        },
+        "companyName": "Al Balqa’ Applied University",
+        "companyLogo": "assets/Balqa Applied University logo.png",
+        "headline": "Bachelor degree",
+        "description": "<p>Graduated from Al Balqa’ Applied University with a Bachelor Degree in “Computer Information Systems”.</p>",
+        "projects": [
+            {
+              "id"          : "antiquaire",
+              "title"       : "Antiquaire Website"
+            }
+        ]
+    }
+]

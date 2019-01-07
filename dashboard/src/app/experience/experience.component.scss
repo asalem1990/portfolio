@@ -1,0 +1,205 @@
+@import "../../vars.scss";
+.timeline {
+	display: inline-block;
+	min-height: 100px;
+	padding-top: 4px;
+	.work_item {
+		position: relative;
+		width: 50%;
+		padding: 30px 40px 40px 40px;
+		display: inline-block;
+		margin-bottom: 0px;
+		z-index: 1;
+    float: left;
+
+		@media(max-width:767px) {
+			width: 70%;
+		}
+
+		.content {
+			border-radius: 6px;
+	    padding: 20px;
+			p:LAST-CHILD {
+				margin: 0px;
+			}
+		}
+
+		&:nth-child(even) {
+			margin-left: calc(50% - 60px);
+			@media(max-width:767px) {
+				margin-left: 30%;
+			}
+			.breakdown_date {
+				left: -220px;
+				text-align: right;
+		    justify-content: flex-end;
+				&:after {
+					left: initial;
+			    right: -30px;
+				}
+			}
+			@media(min-width:576px) {
+				&:after {
+					content: '';
+					width: 0;
+					position: absolute;
+					top: -4px;
+					left: -2px;
+					border-left: 4px solid $LIGHT_THEME_DARK_BG;
+					height: calc(100% + 4px);
+					border-radius: 2px;
+				}
+
+				&:not(:last-child) {
+					&:before {
+						content: '';
+						height: 0;
+						position: absolute;
+						bottom: 0;
+						left: -2px;
+						border-bottom: 4px solid $LIGHT_THEME_DARK_BG;
+						width: 124px;
+						border-radius: 2px;
+						@media(max-width:767px) {
+							// 100% : relates to its container
+							// 30wm : the value of the 30% that takes it the even divs as a margin
+							// 13px : equals to 15px the container padding + (-2px) that the element takes it for margin right "right: -2px;"
+			        width: calc(100% - 30vw + 13px);
+						}
+					}
+				}
+			}
+		}
+		&:nth-child(odd) {
+			margin-left: 60px;
+			@media(max-width:767px) {
+				margin-left: 0px;
+			}
+			.breakdown_date {
+				right: -220px;
+				text-align: left;
+				&:after {
+					left: -30px;
+				}
+			}
+
+			@media(min-width:576px) {
+				&:after {
+					content: '';
+					width: 0;
+					position: absolute;
+					top: -4px;
+					right: -2px;
+					border-right: 4px solid $LIGHT_THEME_DARK_BG;
+					height: calc(100% + 4px);
+					border-radius: 2px;
+				}
+
+				&:not(:last-child) {
+					&:before {
+						content: '';
+						height: 0;
+						position: absolute;
+						bottom: 0;
+						right: -2px;
+						border-bottom: 4px solid $LIGHT_THEME_DARK_BG;
+				    width: 124px;
+						border-radius: 2px;
+						@media(max-width:767px) {
+							// 100% : relates to its container
+							// 30wm : the value of the 30% that takes it the even divs as a margin
+							// 13px : equals to 15px the container padding + (-2px) that the element takes it for margin right "right: -2px;"
+			        width: calc(100% - 30vw + 13px);
+						}
+					}
+				}
+			}
+		}
+		.breakdown_date {
+			position: absolute;
+			display: inline-flex;
+	    align-items: center;
+			color: $DARK_THEME_DARK_BG;
+			z-index: 999999;
+			font-size: 12px;
+	    width: 200px;
+			top: 58px;
+
+			&:after {
+				content: '';
+				background: $DARK_THEME_DARK_BG;
+				width: 0px;
+				height: 0px;
+				padding: 10px;
+				box-sizing: content-box;
+				border-radius: 50%;
+				position: absolute;
+				z-index: 1;
+			}
+		}
+	}
+
+	.employment_projects {
+		a:after {
+			content: '|';
+		}
+		a:LAST-CHILD:after {
+			content: '';
+		}
+	}
+}
+
+
+
+@media(max-width:576px) {
+	.timeline:after {
+		left: 10px;
+	}
+	.work_item {
+		position: relative;
+		width: 100% !important;
+		margin-left: 0px !important;
+		padding: 0px !important;
+		&:not(:last-child) {
+			margin-bottom: 60px !important;
+		}
+		padding-right: 0px !important;
+		padding-left: 10px !important;
+
+		.breakdown_date {
+			position: absolute !important;
+			display: inline-block !important;
+			text-align: center !important;
+			z-index: 999999 !important;
+			font-size: 16px !important;
+			top: 114px !important;
+			left: -90px !important;
+			right: auto !important;
+			font-size: 14px !important;
+			-moz-transform:rotate(-90deg);
+	    -webkit-transform:rotate(-90deg);
+	    -ms-transform:rotate(-90deg);
+	    transform: rotate(-90deg);
+			text-align: right !important;
+
+			&:after {
+				content: none !important;
+			}
+		}
+
+		.content {
+			&:after {
+				content: '';
+				width: 0;
+				height: 0;
+				border-top: 8px solid transparent;
+				border-right: none !important;
+				border-bottom: 8px solid transparent;
+				border-left: none !important;
+				position: absolute;
+				left: -10px;
+				top: 32px;
+			}
+		}
+	}
+}

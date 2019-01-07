@@ -1,0 +1,113 @@
+@import "vars.scss";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i');
+
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src: url('assets/IcoMoon-Free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: $FONT_FAMILY;
+    font-size: 16px;
+    color: $DARK_THEME_LIGHT_BG;
+    font-weight: 300 !important;
+}
+
+h1 {
+  margin-bottom: 1.5em;
+  @media(max-width: 576px) {
+    text-align: left !important;
+    font-size: 3rem;
+    margin-bottom: 0.75em;
+  }
+}
+.container {
+  padding: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media(max-width:767px) {
+    width: 100%;
+  }
+}
+
+.btn {
+    border-radius: 0px !important;
+}
+
+/* USED ICONS */
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'IcoMoon-Free' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 20px;
+    vertical-align: middle;
+
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+    content: "\eab0";
+}
+
+.icon-facebook:before {
+    content: "\ea90";
+}
+
+.icon-linkedin:before {
+    content: "\eaca";
+}
+
+.icon-twitter:before {
+    content: "\ea96";
+}
+
+.icon-instagram:before {
+    content: "\ea92";
+}
+
+.icon-skype:before {
+    content: "\eac5";
+}
+
+.icon-phone:before {
+    content: "\e942";
+}
+
+.icon-envelop:before {
+    content: "\e945";
+}
+
+.icon-share:before {
+    content: "\ea7d";
+}
+
+.icon-download:before {
+    content: "\e9c7";
+}
+
+h1, h2, h3 {
+  font-weight: 300 !important;
+}
+
+h4, h5, h6 {
+  font-weight: 400 !important;
+}

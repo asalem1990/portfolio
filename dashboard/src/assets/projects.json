@@ -1,0 +1,197 @@
+[
+  {
+    "id"          : "performanceApplication",
+    "title"       : "Ooredoo Performance App",
+    "details"     : "Successfully built a hybrid mobile application using Iconic 2 framework, the application doing a calculations for the revenues and display them on graphs - Ooredoo, Qatar",
+    "tags"        : ["HTML5", "CSS3", "Angular2", "TypeScript", "JavaScript", "Mobile", "HybridMobileApp", "Ionic2Framework"],
+    "link"        : "",
+    "screenshots" : [
+      "assets/projects/operformance_1.png",
+      "assets/projects/operformance_2.png",
+      "assets/projects/operformance_3.png",
+      "assets/projects/operformance_4.png",
+      "assets/projects/operformance_5.png",
+      "assets/projects/operformance_6.png",
+      "assets/projects/operformance_7.png",
+      "assets/projects/operformance_8.png",
+      "assets/projects/operformance_9.png",
+      "assets/projects/operformance_10.png",
+      "assets/projects/operformance_11.png"
+    ]
+  },
+  {
+    "id"          : "ooredooWbsiteUXRevamp",
+    "title"       : "Ooredoo Website UI/UX Revamp",
+    "details"     : "Working on Revamping the UI/UX for the Ooredoo Website, the Revamp is all about introducing a new user friendly interface - Ooredoo, Qatar <br />",
+    "tags"        : ["HTML5", "CSS3", "JQuery", "Bootstrap", "AngularJS", "TeamLeader", "ResponsiveWebsite"],
+    "link"        : "https://www.ooredoo.qa",
+    "screenshots" : [
+      "assets/projects/orevamp_1.png",
+      "assets/projects/orevamp_2.png",
+      "assets/projects/orevamp_3.png",
+      "assets/projects/orevamp_4.png",
+      "assets/projects/orevamp_5.png"
+    ]
+  },
+  {
+    "id"          : "gladiatorWebsite",
+    "title"       : "Gladiator website",
+    "details"     : "Developed an Interface and integrated it with the backend system, the microsite allows employees voting for their prefered teams. ",
+    "tags"        : ["HTML5", "CSS3", "JQuery", "Bootstrap", "AJAX", "MicroSite"],
+    "link"        : "",
+    "screenshots" : ["assets/projects/ooredoo_gladiator_1.png"]
+  },
+  {
+    "id"          : "ooredooRDS",
+    "title"       : "Retail Digital Screens",
+    "details"     : "Developed an interface to be used in the screens at Ooredoo's Retails/Stores, the screens are being used as a services directory which help the customers to browse the latest offers, promotions, and services while they are waiting in the store.",
+    "tags"        : ["HTML5", "CSS3", "JQuery", "Bootstrap", "AngularJS", "MicroSite", "Linux"],
+    "link"        : "",
+    "screenshots" : [
+      "assets/projects/ooredoo_rds_1.png",
+      "assets/projects/ooredoo_rds_2.png",
+      "assets/projects/ooredoo_rds_3.png",
+      "assets/projects/ooredoo_rds_4.png",
+      "assets/projects/ooredoo_rds_5.png"
+    ]
+  },
+  {
+    "id"          : "ooredooDigitalShahryWebsite",
+    "title"       : "Ooredoo Digital Shahry Website",
+    "details"     : "Developed a complete new platform where customers can customize their pack allowances in just a click instead of visiting any ooredoo store.",
+    "tags"        : ["HTML5", "CSS3", "JQuery", "Bootstrap", "MicroSite"],
+    "link"        : "",
+    "screenshots" : [
+      "assets/projects/ooredoo_ds_1.jpg",
+      "assets/projects/ooredoo_ds_2.jpg",
+      "assets/projects/ooredoo_ds_3.jpg",
+      "assets/projects/ooredoo_ds_4.jpg",
+      "assets/projects/ooredoo_ds_5.jpg",
+      "assets/projects/ooredoo_ds_6.jpg",
+      "assets/projects/ooredoo_ds_7.jpg",
+      "assets/projects/ooredoo_ds_8.jpg",
+      "assets/projects/ooredoo_ds_9.jpg"
+    ]
+  },
+  {
+    "id"          : "iLoveQatarMobileWebsite",
+    "title"       : "iLoveQatar Mobile Website",
+    "details"     : "Transformed one of the nations most youth friendly website to be responsive across very digital platforms and devices.",
+    "tags"        : ["HTML5", "CSS3", "ResponsiveWebsite"],
+    "link"        : "http://www.iloveqatar.net/",
+    "screenshots" : [
+      "assets/projects/iloveqatar_1.jpg",
+      "assets/projects/iloveqatar_2.jpg",
+      "assets/projects/iloveqatar_3.jpg",
+      "assets/projects/iloveqatar_4.jpg"
+    ]
+  },
+  {
+    "id"          : "ooredooTVWebsite",
+    "title"       : "Ooredoo TV Website",
+    "details"     : "Created a micro website for users to subscribe to home broadband + TV in their finger tips. As per the current statistics, we have crossed our target of selling 100+ devices (each week) through this digital medium.",
+    "tags"        : ["HTML5", "CSS3", "JQuery", "Bootstrap", "JSON", "PHP", "ResponsiveWebsite"],
+    "link"        : "http://tv.ooredoo.qa",
+    "screenshots" : [
+      "assets/projects/ooredoo_tv_1.jpg",
+      "assets/projects/ooredoo_tv_2.jpg",
+      "assets/projects/ooredoo_tv_3.jpg"
+    ]
+  },
+  {
+    "id"          : "ooredooWebsite",
+    "title"       : "Ooredoo Website",
+    "details"     : "Led the front end development team to deliver a very efficient and effective user interface for the most renowned telecom - Ooredoo, Qatar",
+    "tags"        : ["HTML5", "CSS3", "JQuery", "Bootstrap", "AngularJS", "TeamLeader", "ResponsiveWebsite"],
+    "link"        : "https://www.ooredoo.qa",
+    "screenshots" : [
+      "assets/projects/ooredoo_website_1.jpg",
+      "assets/projects/ooredoo_website_2.jpg"
+    ]
+  },
+  {
+    "id"          : "heyHotStaff",
+    "title"       : "HeyHotStaff Website",
+    "details"     : "Successfully developed the backend system, integrated the HTMLs with the backend system, uploaded the project to the server and configured it for the one of the most popular recruitment website.",
+    "tags"        : ["PHP", "MySQL", "CodeIgniter", "AJAX", "LAMP"],
+    "link"        : "https://www.heyhotstaff.com/",
+    "screenshots" : [
+      "assets/projects/heyhotstaff_1.jpg",
+      "assets/projects/heyhotstaff_2.jpg",
+      "assets/projects/heyhotstaff_3.jpg",
+      "assets/projects/heyhotstaff_4.jpg"
+    ]
+  },
+  {
+    "id"          : "preorderWebsites",
+    "title"       : "Ooredoo Pre-Order Website",
+    "details"     : "Responsible for creating pre-order website(s) which gives the customers the ability of placing order much before they are launched in the local market.",
+    "tags"        : ["HTML5", "CSS3", "JQuery", "AngularJS", "AJAX", "ResponsiveWebsite"],
+    "link"        : "http://preorder.ooredoo.qa",
+    "screenshots" : [
+      "assets/projects/ooredoo_preorder_1.jpg",
+      "assets/projects/ooredoo_preorder_2.jpg",
+      "assets/projects/ooredoo_preorder_3.jpg"
+    ]
+  },
+  {
+    "id"          : "almassaaWebsite",
+    "title"       : "Ooredoo - Al Massaa Website",
+    "details"     : "Created an internal micorsite for the Ooredoo employees to view and manage their employee benefits with various outlets in and outside Qatar",
+    "tags"        : ["HTML5", "CSS3", "JQuery", "ResponsiveWebsite"],
+    "link"        : "",
+    "screenshots" : [
+      "assets/projects/ooredoo_almassaa_1.jpg",
+      "assets/projects/ooredoo_almassaa_2.jpg",
+      "assets/projects/ooredoo_almassaa_3.jpg"
+    ]
+  },
+  {
+    "id"          : "OoredooB2CWebsite",
+    "title"       : "Ooredoo B2C Website",
+    "details"     : "Created and developed an interface that allows customers to manage and view their accounts details online. Through this interface, customers were able to manage their subscriptions in just two clicks.",
+    "tags"        : ["HTML5", "CSS3", "JQuery"],
+    "link"        : "http://www.ooredoo.qa/myooredoo",
+    "screenshots" : ["assets/projects/ooredoo_b2c_1.jpg"]
+  },
+  {
+    "id"          : "OoredooCommunityWebsite",
+    "title"       : "Ooredoo Community Website",
+    "details"     : "I was responsible to introduce a complete new interface for customers to be aware of Ooredoo’s on-going promotions and other latest offers. In this community website, customers were to able to find solutions easily by just browsing through topics or asking any user right away.",
+    "tags"        : ["FreeMarker", "LithiumCMS", "HTML5", "CSS3", "JQuery", "ResponsiveWebsite"],
+    "link"        : "http://community.ooredoo.qa/",
+    "screenshots" : [
+      "assets/projects/ooredoo_community_1.jpg",
+      "assets/projects/ooredoo_community_2.jpg",
+      "assets/projects/ooredoo_community_3.jpg",
+      "assets/projects/ooredoo_community_4.jpg"
+    ]
+  },
+  {
+    "id"          : "antiquaire",
+    "title"       : "Antiquaire Website",
+    "details"     : "Developed a Commercial Online Shopping Website as a graduation project. The website has built from scratch using pure PHP and creating own MVC.",
+    "tags"        : ["PHP", "LAMP", "MySQL", "MVC", "HTML5", "CSS3", "JQuery", "Bootstrap", "AdaptiveWebsite"],
+    "link"        : "",
+    "screenshots" : [
+      "assets/projects/antiquaire_1.jpg",
+      "assets/projects/antiquaire_2.jpg"
+    ]
+  },
+  {
+    "id"          : "reserveout",
+    "title"       : "ReserveOut Website",
+    "details"     : "Worked in a team to develop a website that helps customers to browse through various restaurants around their location and they can also make a reservation in their favourite restaurants in just few clicks.",
+    "tags"        : ["Java", "SpringFramework", "MySQL", "XML", "JSP", "HTML5", "CSS3", "JQuery", "Bootstrap", "ResponsiveWebsite"],
+    "link"        : "https://www.reserveout.com/",
+    "screenshots" : [
+      "assets/projects/reserveout_1.jpg",
+      "assets/projects/reserveout_2.jpg",
+      "assets/projects/reserveout_3.jpg",
+      "assets/projects/reserveout_4.jpg",
+      "assets/projects/reserveout_5.jpg",
+      "assets/projects/reserveout_6.jpg",
+      "assets/projects/reserveout_7.jpg"
+    ]
+  }
+]

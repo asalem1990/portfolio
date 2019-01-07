@@ -1,0 +1,46 @@
+{
+    "full_name": "Abdullah Mah'd Salem",
+    "position_title": "UI Software Engineer",
+    "social_channels" : [
+        {
+            "title" : "GitHub",
+            "URL" : "https://github.com/asalem1990",
+            "icon": "icon-github"
+        },
+        {
+            "title" : "Linkedin",
+            "URL" : "https://www.linkedin.com/in/abdullah-salem-317010a2?trk=hp-identity-photo",
+            "icon": "icon-linkedin"
+        },
+        {
+            "title" : "Twitter",
+            "URL" : "https://twitter.com/asalem1990",
+            "icon": "icon-twitter"
+        },
+        {
+            "title" : "Facebook",
+            "URL" : "https://www.facebook.com/asalem1990",
+            "icon": "icon-facebook"
+        },
+        {
+            "title" : "Add to Skype",
+            "URL" : "skype:asalem1990?add",
+            "icon": "icon-skype"
+        },
+        {
+            "title" : "Call on Mobile",
+            "URL" : "tel:00962790560340",
+            "icon": "icon-phone"
+        },
+        {
+            "title" : "Send an Email",
+            "URL" : "mailto:hey@ninjitsu.co",
+            "icon": "icon-envelop"
+        }
+    ],
+    "cv" : {
+        "URL": "assets/Resume - Abdullah Salem - Web Developer.pdf",
+        "title": "DOWNLOAD CV"
+    },
+    "details" : "<h1 style=\"margin-top: 0px;\">Hello, I'm Abdullah!</h1><p>I'm a talanted UI Software Engineer From Amman, Jordan. I enjoy turning complex problems into simple, beautiful and intuitive interface designs.</p><p>I'm passionate about the power of colors and shapes in developing a great new design, and JavaScript offers me endless fascinating possibilities. The scope of my world is a large of the Front End Development: RWD, Parallax scrolling, coding layouts, mobile, animations and other HTML / CSS / JS work.</p><p>Some of those that I've been lucky to have worked with include such leading global brands as Ooredoo - Qatar, ReserveOut, and many others.</p><p>It's important for me not to only be creative but also to pay meticulous attention to details so my clients get the results they want.</p><br />"
+}

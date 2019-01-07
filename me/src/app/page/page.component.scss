@@ -1,0 +1,68 @@
+@import "../../vars.scss";
+app-root {
+	.main-section {
+		display: inline-flex;
+		align-items: center;
+    justify-content: center;
+		min-height: 100vh;
+		width: 100vw;
+		float: left;
+		padding: 10em 0;
+		position: relative;
+		@media(max-width:576px) {
+			padding: 5em 0;
+		}
+		&:not(:last-child) {
+			&:after {
+				position: absolute;
+		    content: '';
+		    pointer-events: none;
+				left: 50%;
+		    width: 100px;
+		    height: 100px;
+		    -webkit-transform: translateX(-50%) rotate(45deg);
+		    transform: translateX(-50%) rotate(45deg);
+				bottom: -50px;
+		    z-index: 10;
+		    background: inherit;
+
+
+				@media(max-width:576px) {
+					width: 60px;
+			    height: 60px;
+					bottom: -30px;
+				}
+			}
+		}
+		&:nth-child(odd) {
+			background: $LIGHT_THEME_DARK_BG;
+		}
+		&:nth-child(even) {
+			background: $LIGHT_THEME_LIGHT_BG;
+		}
+
+	}
+}
+
+.masonry-layout {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+
+	@media (max-width: 992px) {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+
+	@media (max-width: 768px) {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
+
+	&-box {
+		break-inside: avoid;
+		padding-bottom: 1rem;
+	}
+}
