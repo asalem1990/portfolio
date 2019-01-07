@@ -1,6 +1,7 @@
 # personal
 There should be a file called server-config.js located right here, and it has the below content:
 
+```
 var nodemailer = require('nodemailer');
 // DATABASE
 const DBHOST = "xxxx.xxxx.xxxx.xxxx"; // THE IP ADDRESS OF YOUR DATABSE
@@ -53,3 +54,4 @@ module.exports = {
   ADMIN_USERNAME,
   ADMIN_PASSWORD
 }
+```
